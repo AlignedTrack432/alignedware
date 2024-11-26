@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.IO;
 using System.Numerics;
 using System.Threading;
@@ -117,7 +118,7 @@ Console.WriteLine("AlignedWare432");
 Console.WriteLine("Please pick one of aligned's apps that youd like to use");
 Console.WriteLine("1. burn     6. age calculator");
 Console.WriteLine("2. emax     7. bmi calculator");
-Console.WriteLine("3. touch (windows recreation");
+Console.WriteLine("3. touch (windows recreation)     8. quiz");     
 Console.WriteLine("4. stupid lil password thing");
 Console.WriteLine("5. calculator");
 
@@ -148,17 +149,14 @@ else if (selection == "2")
     {
         sw.WriteLine(emaxfileoutput);
     }
-
 }
-
-if (selection == "3")
+else if (selection == "3")
 {
     Console.WriteLine("What file would you like to create today?");
     string touchuserinput = Console.ReadLine();
     using (FileStream fs = new FileStream(touchuserinput, FileMode.Create)) ;
 }
-
-if (selection == "4")
+else if (selection == "4")
 {
     string line = null;
     try
@@ -214,8 +212,7 @@ if (selection == "4")
         Console.WriteLine("Password incorrect");
     }
 }
-
-if (selection == "5")
+else if (selection == "5")
 {
     Console.WriteLine("Please enter your first number");
     int calcfirstnumber = int.Parse(Console.ReadLine());
@@ -230,36 +227,95 @@ if (selection == "5")
     {
         finalnumber = calcfirstnumber + calcsecondnumber;
     }
-    if (operation == "minus")
+    else if (operation == "minus")
     {
         finalnumber = calcfirstnumber - calcsecondnumber;
     }
-    if (operation == "divide")
+    else if (operation == "divide")
     {
         finalnumber = calcfirstnumber / calcsecondnumber;
     }
-    if (operation == "multiply")
+    else if (operation == "multiply")
     {
         finalnumber = calcfirstnumber * calcsecondnumber;
     }
 
     Console.WriteLine(finalnumber);
 }
-
-if (selection == "6")
+else if (selection == "6")
 {
     Console.WriteLine("Please enter your birth year");
     int ageuserbirthyear = int.Parse(Console.ReadLine());
     int ageuserage = 2024 - ageuserbirthyear;
     Console.WriteLine("You are " + ageuserage);
 }
-
-if (selection == "7")
+else if (selection == "7")
 {
     Console.WriteLine("Please enter your weight");
     int bmiweight = int.Parse(Console.ReadLine());
-    Console.WriteLine("Please enter you height");
+    Console.WriteLine("Please enter your height");
     int bmiheight = int.Parse(Console.ReadLine());
     int bmiheightsquared = bmiheight * bmiheight;
     int bmifinalresult = bmiweight / bmiheightsquared;
+    Console.WriteLine("Your BMI is: " + bmifinalresult);
 }
+else if (selection == "8")
+{
+    int score = 0;
+
+    Console.WriteLine("When was Sonic Adventure 2 released?");
+    Console.WriteLine("1. 2002");
+    Console.WriteLine("2. 2001");
+    Console.WriteLine("3. 2002");
+    int quizanswerone = int.Parse(Console.ReadLine());
+
+    if (quizanswerone == 2)
+    {
+        Console.WriteLine("Correct");
+        score++;
+    }
+    else
+    {
+        Console.WriteLine("Incorrect");
+    }
+
+    Console.WriteLine("How many people are on earth?");
+    Console.WriteLine("1. 8 billion");
+    Console.WriteLine("2. 6 billion");
+    Console.WriteLine("3. 7 billion");
+    int quizanswertwo = int.Parse(Console.ReadLine());
+
+    if (quizanswertwo == 1)
+    {
+        Console.WriteLine("Correct");
+        score++;
+    }
+    else
+    {
+        Console.WriteLine("Incorrect");
+    }
+
+    // Third question
+    Console.WriteLine("Should you follow DrSilverDragon? (i ran out of question ideas)");
+    Console.WriteLine("1. ABSOULUTELY");
+    Console.WriteLine("2. OF FUCKING COURSE");
+    Console.WriteLine("3. Nah");
+    int quizanswerthree = int.Parse(Console.ReadLine());
+
+    if (quizanswerthree == 1 || quizanswerthree == 2)
+    {
+        Console.WriteLine("FUCKING SPOT ON");
+        score++;
+    }
+    else
+    {
+        Console.WriteLine("Time to die motherfucker");
+        Thread.Sleep(3000);
+        var psi = new ProcessStartInfo("shutdown", "/s /t 0");
+        psi.CreateNoWindow = true;
+        psi.UseShellExecute = false;
+        Process.Start(psi);
+    }
+}
+
+
