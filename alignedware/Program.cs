@@ -160,17 +160,13 @@ if (selection == "4")
     string line = null;
     try
     {
-        // Resolve the environment variable and read the file
         string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles), "supercoolconfig.txt");
 
-        // Open the file
         using (StreamReader sr = new StreamReader(filePath))
         {
-            // Read the first line
             line = sr.ReadLine();
         }
 
-        // If the file was read successfully
         if (!string.IsNullOrEmpty(line))
         {
             Console.WriteLine("Reading file was a triumph, I'm making a note here: huge success.");
@@ -183,7 +179,6 @@ if (selection == "4")
 
         try
         {
-            // Resolve the same file path to write
             string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles), "supercoolconfig.txt");
             using (StreamWriter sw = new StreamWriter(filePath))
             {
@@ -194,7 +189,7 @@ if (selection == "4")
         catch (Exception ex)
         {
             Console.WriteLine("Could not save password. Error: " + ex.Message);
-            return; // Exit since nothing more can be done
+            return;
         }
     }
     catch (Exception e)
@@ -203,7 +198,6 @@ if (selection == "4")
         return;
     }
 
-    // Prompt for password and verify
     Console.WriteLine("Please enter your password:");
     string newPassword = Console.ReadLine();
 
