@@ -116,7 +116,7 @@ Console.WriteLine("%%%%%%%%%%%%%%%#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Console.WriteLine("AlignedWare432");
 Console.WriteLine("Please pick one of aligned's apps that youd like to use");
 Console.WriteLine("1. burn     6. age calculator");
-Console.WriteLine("2. emax");
+Console.WriteLine("2. emax     7. bmi calculator");
 Console.WriteLine("3. touch (windows recreation");
 Console.WriteLine("4. stupid lil password thing");
 Console.WriteLine("5. calculator");
@@ -252,4 +252,14 @@ if (selection == "6")
     int ageuserbirthyear = int.Parse(Console.ReadLine());
     int ageuserage = 2024 - ageuserbirthyear;
     Console.WriteLine("You are " + ageuserage);
+}
+
+if (selection == "7")
+{
+    Console.WriteLine("Please enter your weight");
+    int bmiweight = int.Parse(Console.ReadLine());
+    Console.WriteLine("Please enter you height");
+    int bmiheight = int.Parse(Console.ReadLine());
+    int bmiheightsquared = bmiheight * bmiheight;
+    int bmifinalresult = bmiweight / bmiheightsquared;
 }
