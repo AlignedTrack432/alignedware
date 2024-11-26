@@ -115,11 +115,11 @@ Console.WriteLine("%%%%%%%%%%%%%%%#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Console.WriteLine("AlignedWare432");
 Console.WriteLine("Please pick one of aligned's apps that youd like to use");
-Console.WriteLine("1. burn");
+Console.WriteLine("1. burn     6. age calculator");
 Console.WriteLine("2. emax");
 Console.WriteLine("3. touch (windows recreation");
-Console.WriteLine("4. Stupid lil password thing");
-Console.WriteLine("5. Calculator");
+Console.WriteLine("4. stupid lil password thing");
+Console.WriteLine("5. calculator");
 
 string selection = Console.ReadLine();
 if (selection == "1")
@@ -246,7 +246,10 @@ if (selection == "5")
     Console.WriteLine(finalnumber);
 }
 
-
-
-
-
+if (selection == "6")
+{
+    Console.WriteLine("Please enter your birth year");
+    int ageuserbirthyear = int.Parse(Console.ReadLine());
+    int ageuserage = 2024 - ageuserbirthyear;
+    Console.WriteLine("You are " + ageuserage);
+}
