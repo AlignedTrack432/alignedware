@@ -12,3 +12,4 @@ C:\Users\Deacon.APERTURESCIENCE\Documents\alignedware\alignedware\alignedware\ob
 C:\Users\Deacon.APERTURESCIENCE\Documents\alignedware\alignedware\alignedware\obj\Debug\net8.0\alignedware.pdb
 C:\Users\Deacon.APERTURESCIENCE\Documents\alignedware\alignedware\alignedware\obj\Debug\net8.0\alignedware.genruntimeconfig.cache
 C:\Users\Deacon.APERTURESCIENCE\Documents\alignedware\alignedware\alignedware\obj\Debug\net8.0\ref\alignedware.dll
+C:\Users\Deacon.APERTURESCIENCE\Documents\alignedware\alignedware\alignedware\obj\Debug\net8.0\alignedware.sourcelink.json

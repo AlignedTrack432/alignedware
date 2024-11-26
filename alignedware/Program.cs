@@ -1,5 +1,7 @@
 ﻿using System;
 using System.IO;
+using System.Numerics;
+using System.Threading;
 Console.WriteLine("+#%%%%####%%@@@@@@@@@%%%%%%%%%%%%%%%#*#%%%%%%%%%@@%%%#%%%%#%%%#%%#%#%%%#%##%%%#%%@@@@@%%%%######%%%*=-=----=@@%*%%%%%%%%%@%##***++**+*##**###**#**#####%%##%%%%#%%%%%%%%%%%%%%%%%@%@@@@@@@@@@@@@@@@@@@@@");
 Console.WriteLine("+*%%%%%%%%%%%@@@@@@@@@@@%%%%%%%@@@@%##%%%%%%%%%%@%%%%%%@%%%@%%%%%%%%%%%##%%####%%%@%%%%%%%%%%%###%@@%+-----=@@#*%%%%%%%%%@#%#***++*#**##**###*****#%########%%###%##%%%%%%%%%%%%@@%@@@@@@@@@@@@@@@@@@@@@");
 Console.WriteLine("+*%%%%%%%%%%%%%@@@@@@@@@@@@%#+#%%%%%%%%%###%%%%@%%##%@@%@@@@%%@%%%%%%##%#@@%%%@%%%%%@%%%%%*@%++%@@@@@@@=---=@@#*%%%%%@%%%@#****#+*#***##***#***#*#######%%##%###%##%%%%%%%%%%%%%@%%@@@@@@@@@@@@@@@@@@@@@");
@@ -117,6 +119,7 @@ Console.WriteLine("1. burn");
 Console.WriteLine("2. emax");
 Console.WriteLine("3. touch (windows recreation");
 Console.WriteLine("4. Stupid lil password thing");
+Console.WriteLine("5. Calculator");
 
 string selection = Console.ReadLine();
 if (selection == "1")
@@ -211,3 +214,39 @@ if (selection == "4")
         Console.WriteLine("Password incorrect");
     }
 }
+
+if (selection == "5")
+{
+    Console.WriteLine("Please enter your first number");
+    int calcfirstnumber = int.Parse(Console.ReadLine());
+    Console.WriteLine("Please enter your second number");
+    int calcsecondnumber = int.Parse(Console.ReadLine());
+    Console.WriteLine("Please enter your operator (plus, minus, divide or multiply)");
+    string operation = Console.ReadLine();
+
+    int finalnumber = 0;
+
+    if (operation == "plus")
+    {
+        finalnumber = calcfirstnumber + calcsecondnumber;
+    }
+    if (operation == "minus")
+    {
+        finalnumber = calcfirstnumber - calcsecondnumber;
+    }
+    if (operation == "divide")
+    {
+        finalnumber = calcfirstnumber / calcsecondnumber;
+    }
+    if (operation == "multiply")
+    {
+        finalnumber = calcfirstnumber * calcsecondnumber;
+    }
+
+    Console.WriteLine(finalnumber);
+}
+
+
+
+
+
