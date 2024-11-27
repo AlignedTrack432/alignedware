@@ -1,8 +1,4 @@
-﻿using System;
-using System.Diagnostics;
-using System.IO;
-using System.Numerics;
-using System.Threading;
+﻿using System.Diagnostics;
 Console.WriteLine("+#%%%%####%%@@@@@@@@@%%%%%%%%%%%%%%%#*#%%%%%%%%%@@%%%#%%%%#%%%#%%#%#%%%#%##%%%#%%@@@@@%%%%######%%%*=-=----=@@%*%%%%%%%%%@%##***++**+*##**###**#**#####%%##%%%%#%%%%%%%%%%%%%%%%%@%@@@@@@@@@@@@@@@@@@@@@");
 Console.WriteLine("+*%%%%%%%%%%%@@@@@@@@@@@%%%%%%%@@@@%##%%%%%%%%%%@%%%%%%@%%%@%%%%%%%%%%%##%%####%%%@%%%%%%%%%%%###%@@%+-----=@@#*%%%%%%%%%@#%#***++*#**##**###*****#%########%%###%##%%%%%%%%%%%%@@%@@@@@@@@@@@@@@@@@@@@@");
 Console.WriteLine("+*%%%%%%%%%%%%%@@@@@@@@@@@@%#+#%%%%%%%%%###%%%%@%%##%@@%@@@@%%@%%%%%%##%#@@%%%@%%%%%@%%%%%*@%++%@@@@@@@=---=@@#*%%%%%@%%%@#****#+*#***##***#***#*#######%%##%###%##%%%%%%%%%%%%%@%%@@@@@@@@@@@@@@@@@@@@@");
@@ -118,7 +114,7 @@ Console.WriteLine("AlignedWare432");
 Console.WriteLine("Please pick one of aligned's apps that youd like to use");
 Console.WriteLine("1. burn     6. age calculator");
 Console.WriteLine("2. emax     7. bmi calculator");
-Console.WriteLine("3. touch (windows recreation)     8. quiz");     
+Console.WriteLine("3. touch (windows recreation)     8. quiz");
 Console.WriteLine("4. stupid lil password thing     9. rock paper scissors");
 Console.WriteLine("5. calculator");
 
@@ -139,7 +135,7 @@ if (selection == "1")
         Console.WriteLine("For the files that are still alive.");
     }
 }
-else if (selection == "2")
+if (selection == "2")
 {
     Console.WriteLine("What file would you like to edit today?");
     string emaxfileinput = Console.ReadLine();
@@ -150,13 +146,13 @@ else if (selection == "2")
         sw.WriteLine(emaxfileoutput);
     }
 }
-else if (selection == "3")
+if (selection == "3")
 {
     Console.WriteLine("What file would you like to create today?");
     string touchuserinput = Console.ReadLine();
     using (FileStream fs = new FileStream(touchuserinput, FileMode.Create)) ;
 }
-else if (selection == "4")
+if (selection == "4")
 {
     string line = null;
     try
@@ -212,7 +208,7 @@ else if (selection == "4")
         Console.WriteLine("Password incorrect");
     }
 }
-else if (selection == "5")
+if (selection == "5")
 {
     Console.WriteLine("Please enter your first number");
     int calcfirstnumber = int.Parse(Console.ReadLine());
@@ -242,14 +238,14 @@ else if (selection == "5")
 
     Console.WriteLine(finalnumber);
 }
-else if (selection == "6")
+if (selection == "6")
 {
     Console.WriteLine("Please enter your birth year");
     int ageuserbirthyear = int.Parse(Console.ReadLine());
     int ageuserage = 2024 - ageuserbirthyear;
     Console.WriteLine("You are " + ageuserage);
 }
-else if (selection == "7")
+if (selection == "7")
 {
     Console.WriteLine("Please enter your weight");
     int bmiweight = int.Parse(Console.ReadLine());
@@ -259,7 +255,7 @@ else if (selection == "7")
     int bmifinalresult = bmiweight / bmiheightsquared;
     Console.WriteLine("Your BMI is: " + bmifinalresult);
 }
-else if (selection == "8")
+if (selection == "8")
 {
     int score = 0;
 
