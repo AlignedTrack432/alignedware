@@ -119,7 +119,7 @@ Console.WriteLine("Please pick one of aligned's apps that youd like to use");
 Console.WriteLine("1. burn     6. age calculator");
 Console.WriteLine("2. emax     7. bmi calculator");
 Console.WriteLine("3. touch (windows recreation)     8. quiz");     
-Console.WriteLine("4. stupid lil password thing");
+Console.WriteLine("4. stupid lil password thing     9. rock paper scissors");
 Console.WriteLine("5. calculator");
 
 string selection = Console.ReadLine();
@@ -295,7 +295,6 @@ else if (selection == "8")
         Console.WriteLine("Incorrect");
     }
 
-    // Third question
     Console.WriteLine("Should you follow DrSilverDragon? (i ran out of question ideas)");
     Console.WriteLine("1. ABSOULUTELY");
     Console.WriteLine("2. OF FUCKING COURSE");
@@ -318,4 +317,62 @@ else if (selection == "8")
     }
 }
 
+if (selection == "9")
+{
+    Random rnd = new Random();
+    int rpsrandom = rnd.Next(1, 3);
+    Console.WriteLine("Would you like to use 1. rock 2. paper or 3. scissors?");
+    int rpsuserinput = int.Parse(Console.ReadLine());
+    if (rpsuserinput == 1)
+    {
+        if (rpsrandom == 2)
+        {
+            Console.WriteLine("You win");
+        }
+        if (rpsrandom == 3)
+        {
+            Console.WriteLine("You win");
+        }
+        if (rpsrandom == 1)
+        {
+            Console.WriteLine("Its a tie");
+        }
+    }
+
+    if (rpsuserinput == 2)
+    {
+        if (rpsrandom == 1)
+        {
+            Console.WriteLine("You win");
+        }
+
+        if (rpsrandom == 2)
+        {
+            Console.WriteLine("Its a tie");
+        }
+
+        if (rpsrandom == 3)
+        {
+            Console.WriteLine("You lose");
+        }
+    }
+
+    if (rpsuserinput == 3)
+    {
+        if (rpsrandom == 1)
+        {
+            Console.WriteLine("You lose");
+        }
+
+        if (rpsrandom == 2)
+        {
+            Console.WriteLine("You win");
+        }
+
+        if (rpsrandom == 3)
+        {
+            Console.WriteLine("Its a tie");
+        }
+    }
+}
 
