@@ -1,8 +1,13 @@
 ﻿using System;
 using System.Diagnostics;
+<<<<<<< Updated upstream
 using System.IO;
 using System.Numerics;
 using System.Threading;
+=======
+using System.Net.Http;
+using System.Threading.Tasks;
+>>>>>>> Stashed changes
 Console.WriteLine("+#%%%%####%%@@@@@@@@@%%%%%%%%%%%%%%%#*#%%%%%%%%%@@%%%#%%%%#%%%#%%#%#%%%#%##%%%#%%@@@@@%%%%######%%%*=-=----=@@%*%%%%%%%%%@%##***++**+*##**###**#**#####%%##%%%%#%%%%%%%%%%%%%%%%%@%@@@@@@@@@@@@@@@@@@@@@");
 Console.WriteLine("+*%%%%%%%%%%%@@@@@@@@@@@%%%%%%%@@@@%##%%%%%%%%%%@%%%%%%@%%%@%%%%%%%%%%%##%%####%%%@%%%%%%%%%%%###%@@%+-----=@@#*%%%%%%%%%@#%#***++*#**##**###*****#%########%%###%##%%%%%%%%%%%%@@%@@@@@@@@@@@@@@@@@@@@@");
 Console.WriteLine("+*%%%%%%%%%%%%%@@@@@@@@@@@@%#+#%%%%%%%%%###%%%%@%%##%@@%@@@@%%@%%%%%%##%#@@%%%@%%%%%@%%%%%*@%++%@@@@@@@=---=@@#*%%%%%@%%%@#****#+*#***##***#***#*#######%%##%###%##%%%%%%%%%%%%%@%%@@@@@@@@@@@@@@@@@@@@@");
@@ -120,7 +125,7 @@ Console.WriteLine("1. burn     6. age calculator");
 Console.WriteLine("2. emax     7. bmi calculator");
 Console.WriteLine("3. touch (windows recreation)     8. quiz");     
 Console.WriteLine("4. stupid lil password thing     9. rock paper scissors");
-Console.WriteLine("5. calculator");
+Console.WriteLine("5. calculator     10. weather");
 
 string selection = Console.ReadLine();
 if (selection == "1")
@@ -372,6 +377,36 @@ if (selection == "9")
         if (rpsrandom == 3)
         {
             Console.WriteLine("Its a tie");
+        }
+    }
+}
+
+if (selection == "10")
+{
+    Console.WriteLine("What city do you live in? (please don’t put your real city)");
+    string weathercity = Console.ReadLine();
+    string apiKey = "46a85deba2d940dbbb515c43d77c87b2";
+    using (HttpClient client = new HttpClient())
+    {
+        string url = $"https://api.weatherbit.io/v2.0/current?city={weathercity}&key={apiKey}";
+
+        try
+        {
+            HttpResponseMessage response = await client.GetAsync(url);
+
+            if (response.IsSuccessStatusCode)
+            {
+                string responseData = await response.Content.ReadAsStringAsync();
+                Console.WriteLine(responseData);
+            }
+            else
+            {
+                Console.WriteLine("Oh no! Something went wrong: " + response.StatusCode);
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Surprise! An error: " + ex.Message);
         }
     }
 }
