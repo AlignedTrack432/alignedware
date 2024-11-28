@@ -14,11 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("alignedware")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-<<<<<<< Updated upstream
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+33517d2873e157434434c0b949310bc69b53e363")]
-=======
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c0b8a4466b671afc9ec1426e63c5ae9a48698d96")]
->>>>>>> Stashed changes
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+660ea73ae3994677e4c12e83a644e333a0015506")]
 [assembly: System.Reflection.AssemblyProductAttribute("alignedware")]
 [assembly: System.Reflection.AssemblyTitleAttribute("alignedware")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

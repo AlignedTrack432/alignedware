@@ -1,13 +1,10 @@
 ﻿using System;
 using System.Diagnostics;
-<<<<<<< Updated upstream
 using System.IO;
 using System.Numerics;
 using System.Threading;
-=======
 using System.Net.Http;
 using System.Threading.Tasks;
->>>>>>> Stashed changes
 Console.WriteLine("+#%%%%####%%@@@@@@@@@%%%%%%%%%%%%%%%#*#%%%%%%%%%@@%%%#%%%%#%%%#%%#%#%%%#%##%%%#%%@@@@@%%%%######%%%*=-=----=@@%*%%%%%%%%%@%##***++**+*##**###**#**#####%%##%%%%#%%%%%%%%%%%%%%%%%@%@@@@@@@@@@@@@@@@@@@@@");
 Console.WriteLine("+*%%%%%%%%%%%@@@@@@@@@@@%%%%%%%@@@@%##%%%%%%%%%%@%%%%%%@%%%@%%%%%%%%%%%##%%####%%%@%%%%%%%%%%%###%@@%+-----=@@#*%%%%%%%%%@#%#***++*#**##**###*****#%########%%###%##%%%%%%%%%%%%@@%@@@@@@@@@@@@@@@@@@@@@");
 Console.WriteLine("+*%%%%%%%%%%%%%@@@@@@@@@@@@%#+#%%%%%%%%%###%%%%@%%##%@@%@@@@%%@%%%%%%##%#@@%%%@%%%%%@%%%%%*@%++%@@@@@@@=---=@@#*%%%%%@%%%@#****#+*#***##***#***#*#######%%##%###%##%%%%%%%%%%%%%@%%@@@@@@@@@@@@@@@@@@@@@");
@@ -126,12 +123,21 @@ Console.WriteLine("2. emax     7. bmi calculator");
 Console.WriteLine("3. touch (windows recreation)     8. quiz");     
 Console.WriteLine("4. stupid lil password thing     9. rock paper scissors");
 Console.WriteLine("5. calculator     10. weather");
+Console.WriteLine("Or type about to see who made this!");
+Console.Beep();
 
 string selection = Console.ReadLine();
+Console.Beep();
+
+if (selection == "about")
+{
+    Console.WriteLine("Made by Aligned\r\nEncouraged by:\r\nDrSilverDragon (twitch.tv/drsilverdragon)\r\nlegoego19 (twitch.tv/legoego19)\r\nAdditional thanks:\r\nW3Schools: like, 50% of the code");
+}
 if (selection == "1")
 {
     Console.WriteLine("Enter file to be put in the Aperture Science Emergency Intelligence Incenerator");
     string burnUserInput = Console.ReadLine();
+    Console.Beep();
     if (burnUserInput == "about")
     {
         Console.WriteLine("Made by Aligned\r\nEncouraged by:\r\nDrSilverDragon (twitch.tv/drsilverdragon)\r\nlegoego19 (twitch.tv/legoego19)\r\nAdditional thanks:\r\nW3Schools: like, 50% of the code");
@@ -148,8 +154,10 @@ else if (selection == "2")
 {
     Console.WriteLine("What file would you like to edit today?");
     string emaxfileinput = Console.ReadLine();
+    Console.Beep();
     Console.WriteLine("Enter contents to be put in file");
     string emaxfileoutput = Console.ReadLine();
+    Console.Beep();
     using (StreamWriter sw = new StreamWriter(emaxfileinput))
     {
         sw.WriteLine(emaxfileoutput);
@@ -160,9 +168,11 @@ else if (selection == "3")
     Console.WriteLine("What file would you like to create today?");
     string touchuserinput = Console.ReadLine();
     using (FileStream fs = new FileStream(touchuserinput, FileMode.Create)) ;
+    Console.Beep();
 }
 else if (selection == "4")
 {
+    Console.WriteLine("FOR THIS UTILITY TO WORK CORRECTLY YOU NEED TO RUN IT AS ADMIN, I COMPLETELY UNDERSTAND IF YOU DO NOT WANT TO");
     string line = null;
     try
     {
@@ -176,12 +186,14 @@ else if (selection == "4")
         if (!string.IsNullOrEmpty(line))
         {
             Console.WriteLine("Reading file was a triumph, I'm making a note here: huge success.");
+            Console.Beep();
         }
     }
     catch (FileNotFoundException)
     {
         Console.WriteLine("Config file not found. Please set your password:");
         string password = Console.ReadLine();
+        Console.Beep();
 
         try
         {
@@ -221,8 +233,10 @@ else if (selection == "5")
 {
     Console.WriteLine("Please enter your first number");
     int calcfirstnumber = int.Parse(Console.ReadLine());
+    Console.Beep();
     Console.WriteLine("Please enter your second number");
     int calcsecondnumber = int.Parse(Console.ReadLine());
+    Console.Beep();
     Console.WriteLine("Please enter your operator (plus, minus, divide or multiply)");
     string operation = Console.ReadLine();
 
@@ -231,18 +245,22 @@ else if (selection == "5")
     if (operation == "plus")
     {
         finalnumber = calcfirstnumber + calcsecondnumber;
+        Console.Beep();
     }
     else if (operation == "minus")
     {
         finalnumber = calcfirstnumber - calcsecondnumber;
+        Console.Beep();
     }
     else if (operation == "divide")
     {
         finalnumber = calcfirstnumber / calcsecondnumber;
+        Console.Beep();
     }
     else if (operation == "multiply")
     {
         finalnumber = calcfirstnumber * calcsecondnumber;
+        Console.Beep();
     }
 
     Console.WriteLine(finalnumber);
@@ -250,22 +268,27 @@ else if (selection == "5")
 else if (selection == "6")
 {
     Console.WriteLine("Please enter your birth year");
+    Console.Beep();
     int ageuserbirthyear = int.Parse(Console.ReadLine());
     int ageuserage = 2024 - ageuserbirthyear;
     Console.WriteLine("You are " + ageuserage);
 }
 else if (selection == "7")
 {
+    Console.Beep();
     Console.WriteLine("Please enter your weight");
     int bmiweight = int.Parse(Console.ReadLine());
+    Console.Beep();
     Console.WriteLine("Please enter your height");
     int bmiheight = int.Parse(Console.ReadLine());
+    Console.Beep();
     int bmiheightsquared = bmiheight * bmiheight;
     int bmifinalresult = bmiweight / bmiheightsquared;
     Console.WriteLine("Your BMI is: " + bmifinalresult);
 }
-else if (selection == "8")
+if (selection == "8")
 {
+    Console.Beep();
     int score = 0;
 
     Console.WriteLine("When was Sonic Adventure 2 released?");
@@ -277,42 +300,50 @@ else if (selection == "8")
     if (quizanswerone == 2)
     {
         Console.WriteLine("Correct");
+        Console.Beep();
         score++;
     }
     else
     {
         Console.WriteLine("Incorrect");
+        Console.Beep();
     }
 
     Console.WriteLine("How many people are on earth?");
     Console.WriteLine("1. 8 billion");
     Console.WriteLine("2. 6 billion");
     Console.WriteLine("3. 7 billion");
+    Console.Beep();
     int quizanswertwo = int.Parse(Console.ReadLine());
 
     if (quizanswertwo == 1)
     {
         Console.WriteLine("Correct");
         score++;
+        Console.Beep();
     }
     else
     {
         Console.WriteLine("Incorrect");
+        Console.Beep();
     }
 
     Console.WriteLine("Should you follow DrSilverDragon? (i ran out of question ideas)");
     Console.WriteLine("1. ABSOULUTELY");
     Console.WriteLine("2. OF FUCKING COURSE");
     Console.WriteLine("3. Nah");
+    Console.Beep();
     int quizanswerthree = int.Parse(Console.ReadLine());
 
     if (quizanswerthree == 1 || quizanswerthree == 2)
     {
         Console.WriteLine("FUCKING SPOT ON");
         score++;
+        Console.Beep();
     }
     else
     {
+        Console.Beep();
         Console.WriteLine("Time to die motherfucker");
         Thread.Sleep(3000);
         var psi = new ProcessStartInfo("shutdown", "/s /t 0");
@@ -324,6 +355,7 @@ else if (selection == "8")
 
 if (selection == "9")
 {
+    Console.Beep();
     Random rnd = new Random();
     int rpsrandom = rnd.Next(1, 3);
     Console.WriteLine("Would you like to use 1. rock 2. paper or 3. scissors?");
@@ -333,14 +365,17 @@ if (selection == "9")
         if (rpsrandom == 2)
         {
             Console.WriteLine("You win");
+            Console.Beep();
         }
         if (rpsrandom == 3)
         {
             Console.WriteLine("You win");
+            Console.Beep();
         }
         if (rpsrandom == 1)
         {
             Console.WriteLine("Its a tie");
+            Console.Beep();
         }
     }
 
@@ -349,16 +384,19 @@ if (selection == "9")
         if (rpsrandom == 1)
         {
             Console.WriteLine("You win");
+            Console.Beep();
         }
 
         if (rpsrandom == 2)
         {
             Console.WriteLine("Its a tie");
+            Console.Beep();
         }
 
         if (rpsrandom == 3)
         {
             Console.WriteLine("You lose");
+            Console.Beep();
         }
     }
 
@@ -367,24 +405,29 @@ if (selection == "9")
         if (rpsrandom == 1)
         {
             Console.WriteLine("You lose");
+            Console.Beep();
         }
 
         if (rpsrandom == 2)
         {
             Console.WriteLine("You win");
+            Console.Beep();
         }
 
         if (rpsrandom == 3)
         {
             Console.WriteLine("Its a tie");
+            Console.Beep();
         }
     }
 }
 
 if (selection == "10")
 {
+    Console.Beep();
     Console.WriteLine("What city do you live in? (please don’t put your real city)");
     string weathercity = Console.ReadLine();
+    Console.Beep();
     string apiKey = "46a85deba2d940dbbb515c43d77c87b2";
     using (HttpClient client = new HttpClient())
     {
@@ -398,6 +441,7 @@ if (selection == "10")
             {
                 string responseData = await response.Content.ReadAsStringAsync();
                 Console.WriteLine(responseData);
+                Console.Beep();
             }
             else
             {
@@ -410,4 +454,5 @@ if (selection == "10")
         }
     }
 }
+
 
