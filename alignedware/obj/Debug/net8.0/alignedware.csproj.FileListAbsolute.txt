@@ -1,0 +1,15 @@
+C:\Users\Deacon.APERTURESCIENCE\Documents\alignedware\alignedware\alignedware\bin\Debug\net8.0\alignedware.exe
+C:\Users\Deacon.APERTURESCIENCE\Documents\alignedware\alignedware\alignedware\bin\Debug\net8.0\alignedware.deps.json
+C:\Users\Deacon.APERTURESCIENCE\Documents\alignedware\alignedware\alignedware\bin\Debug\net8.0\alignedware.runtimeconfig.json
+C:\Users\Deacon.APERTURESCIENCE\Documents\alignedware\alignedware\alignedware\bin\Debug\net8.0\alignedware.dll
+C:\Users\Deacon.APERTURESCIENCE\Documents\alignedware\alignedware\alignedware\bin\Debug\net8.0\alignedware.pdb
+C:\Users\Deacon.APERTURESCIENCE\Documents\alignedware\alignedware\alignedware\obj\Debug\net8.0\alignedware.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Deacon.APERTURESCIENCE\Documents\alignedware\alignedware\alignedware\obj\Debug\net8.0\alignedware.AssemblyInfoInputs.cache
+C:\Users\Deacon.APERTURESCIENCE\Documents\alignedware\alignedware\alignedware\obj\Debug\net8.0\alignedware.AssemblyInfo.cs
+C:\Users\Deacon.APERTURESCIENCE\Documents\alignedware\alignedware\alignedware\obj\Debug\net8.0\alignedware.csproj.CoreCompileInputs.cache
+C:\Users\Deacon.APERTURESCIENCE\Documents\alignedware\alignedware\alignedware\obj\Debug\net8.0\alignedware.dll
+C:\Users\Deacon.APERTURESCIENCE\Documents\alignedware\alignedware\alignedware\obj\Debug\net8.0\refint\alignedware.dll
+C:\Users\Deacon.APERTURESCIENCE\Documents\alignedware\alignedware\alignedware\obj\Debug\net8.0\alignedware.pdb
+C:\Users\Deacon.APERTURESCIENCE\Documents\alignedware\alignedware\alignedware\obj\Debug\net8.0\alignedware.genruntimeconfig.cache
+C:\Users\Deacon.APERTURESCIENCE\Documents\alignedware\alignedware\alignedware\obj\Debug\net8.0\ref\alignedware.dll
+C:\Users\Deacon.APERTURESCIENCE\Documents\alignedware\alignedware\alignedware\obj\Debug\net8.0\alignedware.sourcelink.json
